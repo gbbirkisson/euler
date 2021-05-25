@@ -1,3 +1,8 @@
+// https://projecteuler.net/problem=3
+
+// The prime factors of 13195 are 5, 7, 13 and 29.
+// What is the largest prime factor of the number 600851475143 ?
+
 const NUMBER: u64 = 600851475143;
 
 pub fn solver() -> u64 {
@@ -8,8 +13,9 @@ pub fn solver() -> u64 {
 
 #[cfg(test)]
 mod tests {
-    use super::*;
     use crate::problems::Solver;
+
+    use super::*;
 
     #[test]
     fn test_solve() {

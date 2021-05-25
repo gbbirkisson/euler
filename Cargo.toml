@@ -1,0 +1,52 @@
+[package]
+name = "euler"
+version = "0.1.0"
+authors = ["Guðmundur Björn Birkisson <gbbirkisson@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "util"
+path = "src/util.rs"
+
+[[bin]]
+name = "001"
+path = "src/001/main.rs"
+
+[[bin]]
+name = "002"
+path = "src/002/main.rs"
+
+[[bin]]
+name = "003"
+path = "src/003/main.rs"
+
+[[bin]]
+name = "004"
+path = "src/004/main.rs"
+
+[[bin]]
+name = "005"
+path = "src/005/main.rs"
+
+[[bin]]
+name = "006"
+path = "src/006/main.rs"
+
+[[bin]]
+name = "007"
+path = "src/007/main.rs"
+
+[[bin]]
+name = "008"
+path = "src/008/main.rs"
+
+[[bin]]
+name = "009"
+path = "src/009/main.rs"
+
+[[bin]]
+name = "010"
+path = "src/010/main.rs"
+
+[dependencies]
+primes = "0.3.0"

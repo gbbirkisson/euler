@@ -1,9 +1,6 @@
-use util::run_problem;
-
-const PROBLEM: u16 = 6;
 const THRESHOLD: u64 = 100;
 
-fn solver() -> u64 {
+pub fn solve() -> u64 {
     let mut sum_of_squares: u64 = 0;
     let mut square_of_sums: u64 = 0;
     for n in 1..THRESHOLD + 1 {
@@ -14,6 +11,14 @@ fn solver() -> u64 {
     square_of_sums - sum_of_squares
 }
 
-fn main() {
-    run_problem(PROBLEM, solver, Some(25164150));
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_solve() {
+        let res = solve();
+        println!("Answer: {}", res);
+        assert_eq!(res, 25164150);
+    }
 }

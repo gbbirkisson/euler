@@ -1,6 +1,3 @@
-use util::run_problem;
-
-const PROBLEM: u16 = 2;
 const THRESHOLD: usize = 4000000;
 
 struct Fib {
@@ -27,17 +24,25 @@ impl Iterator for Fib {
     }
 }
 
-fn solver() -> usize {
+pub fn solve() -> usize {
     let res: usize = Fib::new()
         .take_while(|x| x <= &THRESHOLD)
         .map(|x| match x % 2 {
             0 => x,
-            _ => 0
+            _ => 0,
         })
         .sum();
     res
 }
 
-fn main() {
-    run_problem(PROBLEM, solver, Some(4613732))
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_solve() {
+        let res = solve();
+        println!("Answer: {}", res);
+        assert_eq!(res, 4613732);
+    }
 }

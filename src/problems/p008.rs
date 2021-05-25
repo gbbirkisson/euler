@@ -1,6 +1,3 @@
-use util::run_problem;
-
-const PROBLEM: u16 = 8;
 const DIGITS: usize = 13;
 
 const NR_AS_STR: &str = "73167176531330624919225119674426574742355349194934\
@@ -48,7 +45,9 @@ impl Iterator for SetMaker {
             return None;
         }
 
-        let res: Vec<u64> = self.s.chars()
+        let res: Vec<u64> = self
+            .s
+            .chars()
             .skip(self.curr_pos)
             .take(self.part_size)
             .map(|x| x.to_digit(10).unwrap() as u64)
@@ -60,7 +59,7 @@ impl Iterator for SetMaker {
     }
 }
 
-fn solver() -> u64 {
+pub fn solve() -> u64 {
     let mut res: u64 = 0;
     for set in SetMaker::new(NR_AS_STR, DIGITS) {
         let tmp: u64 = set.iter().product();
@@ -71,6 +70,14 @@ fn solver() -> u64 {
     res
 }
 
-fn main() {
-    run_problem(PROBLEM, solver, Some(23514624000));
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_solve() {
+        let res = solve();
+        println!("Answer: {}", res);
+        assert_eq!(res, 23514624000);
+    }
 }

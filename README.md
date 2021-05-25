@@ -2,20 +2,32 @@
 
 <h1>Project Euler</h1>
 
-In this repository is my humble attempt to solve
-some [Project Euler problems](https://projecteuler.net/archives)
+In this repository is my humble attempt to solve some [Project Euler problems](https://projecteuler.net/archives)
 using Rust. This is just for fun and to learn the Rust programming language.
 
 Any solution to a problem should not take more than one minute to solve! This is a quote from their website:
 
 > Each problem has been designed according to a "one-minute rule", which means that although it may take several hours to design a successful algorithm with more difficult problems, an efficient implementation will allow a solution to be obtained on a modestly powered computer in less than one minute.
 
-## Running a solution to a problem
-
-You can run it with cargo. If you want to run the solution to problem `004` run:
+## Running tests
 
 ```console
-$ cargo run --release --bin 004
+$ cargo test --release -- --test-threads=4 --show-output
+```
+
+## Getting a solution to a single problem
+
+You can run it with cargo. If you want to run the solution to problem `4` run:
+
+```console
+$ cargo run --release -- -p 4
+```
+
+## Linting
+
+```
+$ cargo clippy -- -D warnings
+$ cargo fmt --all -- --check
 ```
 
 ## Problems

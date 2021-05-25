@@ -1,11 +1,8 @@
 use primes::{PrimeSet, Sieve};
 
-use util::run_problem;
-
-const PROBLEM: u16 = 7;
 const THRESHOLD: usize = 10001;
 
-fn solver() -> u64 {
+pub fn solve() -> u64 {
     let mut pset = Sieve::new();
 
     let mut res: u64 = 0;
@@ -17,6 +14,14 @@ fn solver() -> u64 {
     res
 }
 
-fn main() {
-    run_problem(PROBLEM, solver, Some(104743));
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_solve() {
+        let res = solve();
+        println!("Answer: {}", res);
+        assert_eq!(res, 104743);
+    }
 }

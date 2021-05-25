@@ -2,6 +2,8 @@
 
 <h1>Project Euler</h1>
 
+[![Cargo](https://github.com/gbbirkisson/euler/actions/workflows/cargo.yml/badge.svg)](https://github.com/gbbirkisson/euler/actions/workflows/cargo.yml)
+
 In this repository is my humble attempt to solve some [Project Euler problems](https://projecteuler.net/archives)
 using Rust. This is just for fun and to learn the Rust programming language.
 
@@ -32,13 +34,13 @@ $ cargo fmt --all -- --check
 
 ## Problems
 
-> **Note**: Slow solutions are marked with 🐢 !
+> **Note**: Slow solutions are marked with: 🐢
 
 - [x] [001](src/problems/p001.rs) Multiples of 3 and 5
 - [x] [002](src/problems/p002.rs) Even Fibonacci numbers
 - [x] [003](src/problems/p003.rs) Largest prime factor
 - [x] [004](src/problems/p004.rs) Largest palindrome product
-- [x] [005](src/problems/p005.rs) 🐢 Smallest multiple
+- [x] [005](src/problems/p005.rs) Smallest multiple 🐢
 - [x] [006](src/problems/p006.rs) Sum square difference
 - [x] [007](src/problems/p007.rs) 10001st prime
 - [x] [008](src/problems/p008.rs) Largest product in a series

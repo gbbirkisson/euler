@@ -1,6 +1,6 @@
 const THRESHOLD: usize = 1000;
 
-pub fn solve() -> usize {
+pub fn solver() -> usize {
     let res: usize = (0..THRESHOLD)
         .map(|x| match (x % 3, x % 5) {
             (0, _) => x,
@@ -14,11 +14,10 @@ pub fn solve() -> usize {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::problems::Solver;
 
     #[test]
     fn test_solve() {
-        let res = solve();
-        println!("Answer: {}", res);
-        assert_eq!(res, 233168);
+        assert_eq!(solver.solve(1), 233168);
     }
 }

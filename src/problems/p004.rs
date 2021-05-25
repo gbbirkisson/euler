@@ -8,7 +8,7 @@ fn is_palindrome(num: usize) -> bool {
     rev_num_str == num_str
 }
 
-pub fn solve() -> usize {
+pub fn solver() -> usize {
     let mut res: usize = 0;
 
     for a in RANGE {
@@ -26,11 +26,10 @@ pub fn solve() -> usize {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::problems::Solver;
 
     #[test]
     fn test_solve() {
-        let res = solve();
-        println!("Answer: {}", res);
-        assert_eq!(res, 906609);
+        assert_eq!(solver.solve(4), 906609);
     }
 }

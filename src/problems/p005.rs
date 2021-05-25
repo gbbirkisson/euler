@@ -1,6 +1,6 @@
 const THRESHOLD: u64 = 20;
 
-pub fn solve() -> u64 {
+pub fn solver() -> u64 {
     let mut res: u64 = 0;
     for n in THRESHOLD.. {
         let mut is_match = true;
@@ -21,11 +21,10 @@ pub fn solve() -> u64 {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::problems::Solver;
 
     #[test]
     fn test_solve() {
-        let res = solve();
-        println!("Answer: {}", res);
-        assert_eq!(res, 232792560);
+        assert_eq!(solver.solve(5), 232792560);
     }
 }

@@ -59,7 +59,7 @@ impl Iterator for SetMaker {
     }
 }
 
-pub fn solve() -> u64 {
+pub fn solver() -> u64 {
     let mut res: u64 = 0;
     for set in SetMaker::new(NR_AS_STR, DIGITS) {
         let tmp: u64 = set.iter().product();
@@ -72,12 +72,12 @@ pub fn solve() -> u64 {
 
 #[cfg(test)]
 mod tests {
+    use crate::problems::Solver;
+
     use super::*;
 
     #[test]
     fn test_solve() {
-        let res = solve();
-        println!("Answer: {}", res);
-        assert_eq!(res, 23514624000);
+        assert_eq!(solver.solve(8), 23514624000);
     }
 }

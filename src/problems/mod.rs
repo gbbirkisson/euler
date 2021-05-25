@@ -12,80 +12,63 @@ mod p008;
 mod p009;
 mod p010;
 
-struct Solver<T> {
-    id: u16,
-    solver: fn() -> T,
+trait Solver<R> {
+    fn solve(&self, id: u16) -> R;
 }
 
-impl<T> Solver<T>
+impl<F, R> Solver<R> for F
 where
-    T: Debug,
+    F: Fn() -> R,
+    R: Debug,
 {
-    fn run(self) {
-        println!("Problem: {:03}", self.id);
-        println!("Link: https://projecteuler.net/problem={}", self.id);
+    fn solve(&self, id: u16) -> R {
+        println!("Problem: {:03}", id);
+        println!("Link: https://projecteuler.net/problem={}", id);
         println!("Started!");
         let now = Instant::now();
-        let res: T = (self.solver)();
+        let res: R = self();
         let elapsed = now.elapsed().as_millis();
         println!("Done!");
         println!("Time taken: {} ms", elapsed);
         println!("Answer: {:?}", res);
+        res
     }
 }
 
 pub fn run_solver(id: u16) {
     match id {
-        1 => Solver {
-            id,
-            solver: p001::solve,
+        1 => {
+            p001::solver.solve(id);
         }
-        .run(),
-        2 => Solver {
-            id,
-            solver: p002::solve,
+        2 => {
+            p002::solver.solve(id);
         }
-        .run(),
-        3 => Solver {
-            id,
-            solver: p003::solve,
+        3 => {
+            p003::solver.solve(id);
         }
-        .run(),
-        4 => Solver {
-            id,
-            solver: p004::solve,
+        4 => {
+            p004::solver.solve(id);
         }
-        .run(),
-        5 => Solver {
-            id,
-            solver: p005::solve,
+        5 => {
+            p005::solver.solve(id);
         }
-        .run(),
-        6 => Solver {
-            id,
-            solver: p006::solve,
+        6 => {
+            p006::solver.solve(id);
         }
-        .run(),
-        7 => Solver {
-            id,
-            solver: p007::solve,
+        7 => {
+            p007::solver.solve(id);
         }
-        .run(),
-        8 => Solver {
-            id,
-            solver: p008::solve,
+        8 => {
+            p008::solver.solve(id);
         }
-        .run(),
-        9 => Solver {
-            id,
-            solver: p009::solve,
+        9 => {
+            p009::solver.solve(id);
         }
-        .run(),
-        10 => Solver {
-            id,
-            solver: p010::solve,
+        10 => {
+            p010::solver.solve(id);
         }
-        .run(),
-        _ => todo!("Problem not solved yet"),
+        _ => {
+            panic!("Problem not solved yet")
+        }
     };
 }

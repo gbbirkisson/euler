@@ -24,7 +24,7 @@ impl Iterator for Fib {
     }
 }
 
-pub fn solve() -> usize {
+pub fn solver() -> usize {
     let res: usize = Fib::new()
         .take_while(|x| x <= &THRESHOLD)
         .map(|x| match x % 2 {
@@ -37,12 +37,12 @@ pub fn solve() -> usize {
 
 #[cfg(test)]
 mod tests {
+    use crate::problems::Solver;
+
     use super::*;
 
     #[test]
     fn test_solve() {
-        let res = solve();
-        println!("Answer: {}", res);
-        assert_eq!(res, 4613732);
+        assert_eq!(solver.solve(2), 4613732);
     }
 }

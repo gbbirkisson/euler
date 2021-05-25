@@ -1,6 +1,6 @@
 const TARGET: usize = 1000;
 
-pub fn solve() -> usize {
+pub fn solver() -> usize {
     let mut res = (0, 0, 0);
     for a in 1..TARGET + 1 {
         for b in a + 1..TARGET + 1 {
@@ -16,12 +16,12 @@ pub fn solve() -> usize {
 
 #[cfg(test)]
 mod tests {
+    use crate::problems::Solver;
+
     use super::*;
 
     #[test]
     fn test_solve() {
-        let res = solve();
-        println!("Answer: {}", res);
-        assert_eq!(res, 31875000);
+        assert_eq!(solver.solve(9), 31875000);
     }
 }

@@ -17,19 +17,18 @@ Any solution to a problem should not take more than one minute to solve! This is
 $ cargo test --release -- --test-threads=4 --show-output
 ```
 
-## Getting a solution to a single problem
+## Running a single solution
 
-You can run it with cargo. If you want to run the solution to problem `4` run:
+For example, if you want to run the solution to problem `4` run:
 
 ```console
 $ cargo run --release -- -p 4
 ```
 
-## Linting
+## Test + Linting
 
-```
-$ cargo clippy -- -D warnings
-$ cargo fmt --all -- --check
+```console
+$ make
 ```
 
 ## Problems

@@ -46,7 +46,7 @@ $ cargo fmt --all -- --check
 - [x] [008](src/problems/p008.rs) Largest product in a series
 - [x] [009](src/problems/p009.rs) Special Pythagorean triplet
 - [x] [010](src/problems/p010.rs) Summation of primes
-- [ ] 011 Largest product in a grid
+- [x] [011](src/problems/p011.rs) Largest product in a grid
 - [ ] 012 Highly divisible triangular number
 - [ ] 013 Large sum
 - [ ] 014 Longest Collatz sequence

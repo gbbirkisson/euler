@@ -9,9 +9,10 @@ pub fn solver() -> u64 {
     let mut res: u64 = 0;
     for n in THRESHOLD.. {
         let mut is_match = true;
-        for i in 2..THRESHOLD + 1 {
+        for i in (2..THRESHOLD + 1).rev() {
             if n % i != 0 {
                 is_match = false;
+                break;
             }
         }
 

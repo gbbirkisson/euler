@@ -14,6 +14,8 @@ mod p010;
 mod p011;
 mod p012;
 
+mod p014;
+
 trait Solver<R> {
     fn solve(&self, id: u16) -> R;
 }
@@ -74,6 +76,9 @@ pub fn run_solver(id: u16) {
         }
         12 => {
             p012::solver.solve(id);
+        }
+        14 => {
+            p014::solver.solve(id);
         }
         _ => {
             panic!("Problem not solved yet")

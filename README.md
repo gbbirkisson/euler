@@ -49,7 +49,7 @@ $ make
 - [x] [012](src/problems/p012.rs) Highly divisible triangular number
 - [x] [013](src/problems/p013.rs) Large sum
 - [x] [014](src/problems/p014.rs) Longest Collatz sequence
-- [ ] 015 Lattice paths
+- [x] [015](src/problems/p015.rs) Lattice paths
 - [ ] 016 Power digit sum
 - [ ] 017 Number letter counts
 - [ ] 018 Maximum path sum I

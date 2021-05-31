@@ -47,7 +47,7 @@ $ make
 - [x] [010](src/problems/p010.rs) Summation of primes
 - [x] [011](src/problems/p011.rs) Largest product in a grid
 - [x] [012](src/problems/p012.rs) Highly divisible triangular number
-- [ ] 013 Large sum
+- [x] [013](src/problems/p013.rs) Large sum
 - [x] [014](src/problems/p014.rs) Longest Collatz sequence
 - [ ] 015 Lattice paths
 - [ ] 016 Power digit sum

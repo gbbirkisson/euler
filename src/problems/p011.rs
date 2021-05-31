@@ -137,6 +137,7 @@ mod tests {
 
     use super::*;
 
+    #[ignore]
     #[test]
     fn test_grid() {
         let grid: Vec<usize> = grid();

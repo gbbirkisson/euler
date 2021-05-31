@@ -13,7 +13,7 @@ mod p009;
 mod p010;
 mod p011;
 mod p012;
-
+mod p013;
 mod p014;
 
 trait Solver<R> {
@@ -76,6 +76,9 @@ pub fn run_solver(id: u16) {
         }
         12 => {
             p012::solver.solve(id);
+        }
+        13 => {
+            p013::solver.solve(id);
         }
         14 => {
             p014::solver.solve(id);

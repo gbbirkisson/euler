@@ -23,13 +23,19 @@ const TRIANGLE: &str = "75
 63 66 04 68 89 53 67 30 73 16 69 87 40 31
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23";
 
-struct Triangle {
+pub struct Triangle {
     levels: Vec<Vec<usize>>,
 }
 
-struct Route {
+pub struct Route {
     sum: usize,
     steps: Vec<(usize, usize)>,
+}
+
+impl Route {
+    pub fn get_sum(&self) -> usize {
+        self.sum
+    }
 }
 
 impl PartialOrd for Route {
@@ -67,15 +73,17 @@ impl Add for Route {
 }
 
 impl Triangle {
-    fn new(str: &str) -> Triangle {
+    pub fn new(str: &str) -> Triangle {
         let mut levels: Vec<Vec<usize>> = Vec::new();
         for (nr, line) in str.split('\n').into_iter().enumerate() {
-            let nums: Vec<usize> = line
-                .split(' ')
-                .map(|x| x.parse::<usize>().unwrap())
-                .collect();
-            assert_eq!(nums.len(), nr + 1);
-            levels.push(nums);
+            if !line.is_empty() {
+                let nums: Vec<usize> = line
+                    .split(' ')
+                    .map(|x| x.parse::<usize>().unwrap())
+                    .collect();
+                assert_eq!(nums.len(), nr + 1);
+                levels.push(nums);
+            }
         }
         Triangle { levels }
     }
@@ -119,7 +127,7 @@ impl Triangle {
         }
     }
 
-    fn best_route(&self, branch_depth: usize) -> Route {
+    pub fn best_route(&self, branch_depth: usize) -> Route {
         // Branch depth need to be more than 0
         assert!(branch_depth > 0);
 
@@ -160,7 +168,7 @@ impl Triangle {
 pub fn solver() -> usize {
     let triangle = Triangle::new(TRIANGLE);
     let route = triangle.best_route(5);
-    route.sum
+    route.get_sum()
 }
 
 #[cfg(test)]
@@ -180,11 +188,11 @@ mod tests {
     fn test_small_triangle() {
         let triangle = Triangle::new(TEST_TRIANGLE);
 
-        assert_eq!(triangle.best_route(1).sum, 23);
-        assert_eq!(triangle.best_route(2).sum, 23);
-        assert_eq!(triangle.best_route(3).sum, 23);
-        assert_eq!(triangle.best_route(4).sum, 23);
-        assert_eq!(triangle.best_route(5).sum, 23);
+        assert_eq!(triangle.best_route(1).get_sum(), 23);
+        assert_eq!(triangle.best_route(2).get_sum(), 23);
+        assert_eq!(triangle.best_route(3).get_sum(), 23);
+        assert_eq!(triangle.best_route(4).get_sum(), 23);
+        assert_eq!(triangle.best_route(5).get_sum(), 23);
     }
 
     #[test]

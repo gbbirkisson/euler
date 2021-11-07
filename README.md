@@ -101,7 +101,7 @@ $ make
 - [ ] 064 Odd period square roots
 - [ ] 065 Convergents of e
 - [ ] 066 Diophantine equation
-- [ ] 067 Maximum path sum II
+- [x] [067](src/problems/p067.rs) Maximum path sum II
 - [ ] 068 Magic 5-gon ring
 - [ ] 069 Totient maximum
 - [ ] 070 Totient permutation

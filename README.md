@@ -52,7 +52,7 @@ $ make
 - [x] [015](src/problems/p015.rs) Lattice paths
 - [x] [016](src/problems/p016.rs) Power digit sum
 - [x] [017](src/problems/p017.rs) Number letter counts
-- [ ] 018 Maximum path sum I
+- [x] [018](src/problems/p018.rs) Maximum path sum I
 - [ ] 019 Counting Sundays
 - [ ] 020 Factorial digit sum
 - [ ] 021 Amicable numbers

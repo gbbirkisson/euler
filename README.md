@@ -33,7 +33,7 @@ $ make
 
 ## Problems
 
-> **Note**: Slow solutions are marked with: 🐢
+> **Note**: Solutions that take more than 1 second are marked with: 🐢
 
 - [x] [001](src/problems/p001.rs) Multiples of 3 and 5
 - [x] [002](src/problems/p002.rs) Even Fibonacci numbers
@@ -53,9 +53,9 @@ $ make
 - [x] [016](src/problems/p016.rs) Power digit sum
 - [x] [017](src/problems/p017.rs) Number letter counts
 - [x] [018](src/problems/p018.rs) Maximum path sum I
-- [ ] 019 Counting Sundays
-- [ ] 020 Factorial digit sum
-- [ ] 021 Amicable numbers
+- [x] [019](src/problems/p019.rs) Counting Sundays
+- [x] [020](src/problems/p020.rs) Factorial digit sum
+- [x] [021](src/problems/p021.rs) Amicable numbers 🐢
 - [ ] 022 Names scores
 - [ ] 023 Non-abundant sums
 - [ ] 024 Lexicographic permutations

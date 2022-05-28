@@ -6,4 +6,5 @@ edition = "2018"
 
 [dependencies]
 primes = "0.3.0"
+num = "0.4.0"
 clap = "2.33.3"

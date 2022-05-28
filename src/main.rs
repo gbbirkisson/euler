@@ -1,4 +1,4 @@
-use clap::{App, Arg};
+use clap::{Arg, Command};
 
 mod problems;
 
@@ -7,12 +7,12 @@ const AUTHOR: &str = env!("CARGO_PKG_AUTHORS");
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 fn main() {
-    let matches = App::new(NAME)
+    let matches = Command::new(NAME)
         .version(VERSION)
         .author(AUTHOR)
         .arg(
-            Arg::with_name("problem")
-                .short("p")
+            Arg::new("problem")
+                .short('p')
                 .long("problem")
                 .required(true)
                 .takes_value(true)

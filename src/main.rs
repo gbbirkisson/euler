@@ -15,10 +15,15 @@ fn main() {
                 .short('p')
                 .long("problem")
                 .required(true)
-                .takes_value(true)
                 .help("Number of the problem you want to run"),
         )
         .get_matches();
 
-    problems::run_solver(matches.value_of("problem").unwrap().parse().unwrap());
+    problems::run_solver(
+        matches
+            .get_one::<String>("problem")
+            .unwrap()
+            .parse()
+            .unwrap(),
+    );
 }

@@ -86,7 +86,6 @@ fn to_words(number: u32) -> String {
 
 fn count_letters(word: &str) -> usize {
     word.chars()
-        .into_iter()
         .filter(|c| *c != ' ')
         .filter(|c| *c != '-')
         .count()

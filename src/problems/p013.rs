@@ -106,7 +106,6 @@ const GRID_AS_STR: &str = "37107287533902102798797998220837590246510135740250 \
 pub fn solver() -> String {
     let res: u64 = GRID_AS_STR
         .split(' ')
-        .into_iter()
         .map(|x| x[..15].parse::<u64>().unwrap())
         .sum();
     res.to_string().chars().take(10).collect::<String>()

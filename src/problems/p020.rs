@@ -17,10 +17,7 @@ fn solve(n: u64) -> u32 {
         x *= BigUint::from(n);
     }
     let x = format!("{:.0}", x);
-    x.chars()
-        .into_iter()
-        .map(|x| x.to_digit(RADIX).unwrap())
-        .sum()
+    x.chars().map(|x| x.to_digit(RADIX).unwrap()).sum()
 }
 
 pub fn solver() -> u32 {

@@ -75,7 +75,7 @@ impl Add for Route {
 impl Triangle {
     pub fn new(str: &str) -> Triangle {
         let mut levels: Vec<Vec<usize>> = Vec::new();
-        for (nr, line) in str.split('\n').into_iter().enumerate() {
+        for (nr, line) in str.split('\n').enumerate() {
             if !line.is_empty() {
                 let nums: Vec<usize> = line
                     .split(' ')

@@ -109,7 +109,6 @@ fn get_biggest_product(grid: &[usize], x: usize, y: usize) -> usize {
 fn grid() -> Vec<usize> {
     GRID_AS_STR
         .split(' ')
-        .into_iter()
         .map(|x| x.parse::<usize>().unwrap())
         .collect()
 }

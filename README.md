@@ -1,8 +1,11 @@
-<img align="right" src="https://projecteuler.net/images/clipart/euler_portrait.png">
-
-<h1>Project Euler</h1>
-
-[![Cargo](https://github.com/gbbirkisson/euler/actions/workflows/cargo.yml/badge.svg)](https://github.com/gbbirkisson/euler/actions/workflows/cargo.yml)
+<h1>
+  <p align="center">
+    <a href="https://github.com/gbbirkisson/euler">
+      <img src="https://projecteuler.net/images/clipart/euler_portrait.png" alt="Logo" height="128">
+    </a>
+    <br>Project Euler
+  </p>
+</h1>
 
 In this repository is my humble attempt to solve some [Project Euler problems](https://projecteuler.net/archives)
 using Rust. This is just for fun and to learn the Rust programming language.

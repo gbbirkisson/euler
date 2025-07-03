@@ -16,7 +16,7 @@ fn solve(n: u64) -> u32 {
     for n in 2..=n {
         x *= BigUint::from(n);
     }
-    let x = format!("{:.0}", x);
+    let x = format!("{x:.0}");
     x.chars().map(|x| x.to_digit(RADIX).unwrap()).sum()
 }
 

@@ -34,15 +34,15 @@ where
     R: Debug,
 {
     fn solve(&self, id: u16) -> R {
-        println!("Problem: {:03}", id);
-        println!("Link: https://projecteuler.net/problem={}", id);
+        println!("Problem: {id:03}");
+        println!("Link: https://projecteuler.net/problem={id}");
         println!("Started!");
         let now = Instant::now();
         let res: R = self();
         let elapsed = now.elapsed().as_millis();
         println!("Done!");
-        println!("Time taken: {} ms", elapsed);
-        println!("Answer: {:?}", res);
+        println!("Time taken: {elapsed} ms");
+        println!("Answer: {res:?}");
         res
     }
 }

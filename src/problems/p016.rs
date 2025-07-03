@@ -9,7 +9,7 @@ const RADIX: u32 = 10;
 pub fn solver() -> u32 {
     let x = 2.0_f64;
     let x = x.powi(1000);
-    let x = format!("{:.0}", x);
+    let x = format!("{x:.0}");
     x.chars().map(|x| x.to_digit(RADIX).unwrap()).sum()
 }
 

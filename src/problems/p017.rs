@@ -84,7 +84,7 @@ fn to_words_str(number: &str) -> String {
 }
 
 fn to_words(number: u32) -> String {
-    let number = format!("{:.0}", number);
+    let number = format!("{number:.0}");
     to_words_str(number.as_str())
 }
 

@@ -21,7 +21,7 @@ impl ProperDivisors for u64 {
         let mut divisors: Vec<u64> = Vec::new();
 
         for i in 1..*self {
-            if *self % i == 0 {
+            if (*self).is_multiple_of(i) {
                 divisors.push(i);
             }
         }

@@ -1,4 +1,4 @@
-FROM alpine:3.24.1
+FROM alpine:3.24.2
 
 ENV GLIBC_VERSION 2.33-r0
 
